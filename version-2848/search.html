@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>影片搜索-精选电视剧-高清剧集片库-电视剧免费在线观看</title>
+  <meta name="description" content="在精选电视剧片库中搜索片名、地区、年份、类型和标签，快速进入高清剧集详情页。">
+  <meta name="keywords" content="精选电视剧,高清剧集片库,电视剧免费在线观看,剧集精选,热门电视剧,电视剧大全,影片搜索,剧集搜索">
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+<header class="site-header glass-effect">
+  <div class="nav-wrap">
+    <a class="brand" href="./index.html" aria-label="高清剧集大全">
+      <span class="brand-mark">▶</span>
+      <span class="brand-name gradient-text">高清剧集大全</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="打开菜单">☰</button>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="./index.html">首页</a>
+      <a href="./categories.html">分类</a>
+      <a href="./rankings.html">排行榜</a>
+      <a href="./search.html">搜索</a>
+    </nav>
+    <form class="nav-search" action="./search.html" method="get">
+      <input type="search" name="q" placeholder="搜索影片..." autocomplete="off">
+      <button type="submit" aria-label="搜索">⌕</button>
+    </form>
+  </div>
+</header>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-kicker">Search</span>
+      <h1>影片搜索</h1>
+      <p>输入片名、地区、年份、题材或标签，快速找到想看的内容。</p>
+      <form class="page-search search-page-form" action="./search.html" method="get">
+        <input id="search-input" type="search" name="q" placeholder="搜索影片..." autocomplete="off">
+        <button type="submit">搜索</button>
+      </form>
+    </div>
+  </section>
+  <section class="section container">
+    <div id="search-results" class="movie-grid"></div>
+  </section>
+  <section class="section container search-recommend">
+    <div class="section-head">
+      <div>
+        <span class="section-kicker">Recommend</span>
+        <h2>热门推荐</h2>
+      </div>
+    </div>
+    <div class="movie-grid">
+      <a class="movie-card card-hover" href="./movies/movie-0031.html" data-search="托米和灵猫 中国大陆 动画电影 2023 奇幻家庭 动作科幻 国风奇幻,留守儿童,治愈系,环保启蒙">
+  <span class="poster-wrap">
+    <img src="./31.jpg" alt="托米和灵猫" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>托米和灵猫</strong>
+    <em>2023 · 中国大陆 · 动画电影</em>
+    <span class="card-desc">贵州山村的留守儿童托米救了一只受伤的白猫，发现它能实现愿望，但每个愿望都会让山林失去一样东西。</span>
+    <span class="tag-row"><span>国风奇幻</span><span>留守儿童</span><span>治愈系</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0032.html" data-search="孤雄 中国大陆 电影 2024 科幻, 悬疑, 伦理 热门剧场 克隆,身份认同,伦理困境,独角戏">
+  <span class="poster-wrap">
+    <img src="./32.jpg" alt="孤雄" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>孤雄</strong>
+    <em>2024 · 中国大陆 · 电影</em>
+    <span class="card-desc">世界上最后一个男人醒来，发现身边躺着100个自己的克隆体，而他们全都宣称自己才是“原版”。</span>
+    <span class="tag-row"><span>克隆</span><span>身份认同</span><span>伦理困境</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0033.html" data-search="新妇日记 日本 电影 1965 剧情，家庭 爱情喜剧 黑白,女性,传统">
+  <span class="poster-wrap">
+    <img src="./33.jpg" alt="新妇日记" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>新妇日记</strong>
+    <em>1965 · 日本 · 电影</em>
+    <span class="card-desc">一个受过现代教育的新娘嫁入传统农村家庭，用她的日记，记录下战后日本农村妇女的隐忍与觉醒。</span>
+    <span class="tag-row"><span>黑白</span><span>女性</span><span>传统</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0034.html" data-search="魂：恐怖的开始 日本 电影 2024 恐怖 / 惊悚 亚洲剧场 都市怪谈,诅咒录像带,伪纪录片">
+  <span class="poster-wrap">
+    <img src="./34.jpg" alt="魂：恐怖的开始" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>魂：恐怖的开始</strong>
+    <em>2024 · 日本 · 电影</em>
+    <span class="card-desc">废弃录像带里记录了一种“灵魂出窍”的古法，五个年轻人尝试后，身体开始拒绝接纳自己的灵魂。</span>
+    <span class="tag-row"><span>都市怪谈</span><span>诅咒录像带</span><span>伪纪录片</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0035.html" data-search="爱欲四重奏 2 意大利 电影 2025 剧情, 爱情, 情欲 精选剧集 四段式,婚姻,欲望,现代关系,心理">
+  <span class="poster-wrap">
+    <img src="./35.jpg" alt="爱欲四重奏 2" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>爱欲四重奏 2</strong>
+    <em>2025 · 意大利 · 电影</em>
+    <span class="card-desc">四个互不相干的故事，在同一个度假小岛上交织成一场关于欲望、背叛与自由的交响曲。</span>
+    <span class="tag-row"><span>四段式</span><span>婚姻</span><span>欲望</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0036.html" data-search="食破天惊2 中国大陆 电影 2024 灾难, 科幻 纪录传记 食品安全,变异,黑色喜剧">
+  <span class="poster-wrap">
+    <img src="./36.jpg" alt="食破天惊2" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>食破天惊2</strong>
+    <em>2024 · 中国大陆 · 电影</em>
+    <span class="card-desc">基因改造的超级作物疯狂繁殖，将整座城市变成巨大的“食物地狱”，人类沦为菜单。</span>
+    <span class="tag-row"><span>食品安全</span><span>变异</span><span>黑色喜剧</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0037.html" data-search="忘了我是谁 中国大陆 电影 2025 悬疑 / 剧情 / 科幻 家庭剧情 失忆,记忆植入,身份认同,软科幻">
+  <span class="poster-wrap">
+    <img src="./37.jpg" alt="忘了我是谁" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>忘了我是谁</strong>
+    <em>2025 · 中国大陆 · 电影</em>
+    <span class="card-desc">他从病床上醒来，妻子说他是著名脑科学家，女儿说他是慈父，但镜子里的脸告诉他：这不是他的人生。</span>
+    <span class="tag-row"><span>失忆</span><span>记忆植入</span><span>身份认同</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0038.html" data-search="暗魔怨 韩国 电影 2025 恐怖 / 悬疑 / 超自然 悬疑推理 驱魔,附身,双胞胎,反转">
+  <span class="poster-wrap">
+    <img src="./38.jpg" alt="暗魔怨" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>暗魔怨</strong>
+    <em>2025 · 韩国 · 电影</em>
+    <span class="card-desc">驱魔仪式上，神父发现真正被恶魔附身的不是女孩，而是前来驱魔的自己。</span>
+    <span class="tag-row"><span>驱魔</span><span>附身</span><span>双胞胎</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0039.html" data-search="芳心之罪 中国台湾 电影 1989 剧情 / 爱情 海外剧场 女性,禁忌之恋,家族秘密">
+  <span class="poster-wrap">
+    <img src="./39.jpg" alt="芳心之罪" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>芳心之罪</strong>
+    <em>1989 · 中国台湾 · 电影</em>
+    <span class="card-desc">三个性格迥异的姐妹，因一封匿名情书，揭开了彼此深埋心底的欲望与罪恶。</span>
+    <span class="tag-row"><span>女性</span><span>禁忌之恋</span><span>家族秘密</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0040.html" data-search="大宋北斗司 中国 电视剧 2026 古装、悬疑、探案 国产专区 宋仁宗,民间组织,机关术,密室杀人">
+  <span class="poster-wrap">
+    <img src="./40.jpg" alt="大宋北斗司" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>大宋北斗司</strong>
+    <em>2026 · 中国 · 电视剧</em>
+    <span class="card-desc">北宋天圣年间，一个专查“灵异重案”的秘密机构，发现所有怪谈都指向了皇城下的前朝遗迹。</span>
+    <span class="tag-row"><span>宋仁宗</span><span>民间组织</span><span>机关术</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0041.html" data-search="心理陷阱 美国 电影 1991 悬疑 / 惊悚 / 犯罪 精选剧集 高智商犯罪,博弈,反转">
+  <span class="poster-wrap">
+    <img src="./41.jpg" alt="心理陷阱" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>心理陷阱</strong>
+    <em>1991 · 美国 · 电影</em>
+    <span class="card-desc">谈判专家被反社会人格罪犯设局，却发现自己才是他最后一件“作品”。</span>
+    <span class="tag-row"><span>高智商犯罪</span><span>博弈</span><span>反转</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0042.html" data-search="站住！花小姐 中国 剧集 2025 爱情 / 喜剧 / 都市 纪录传记 霸总,反套路,女保镖,欢喜冤家,职场">
+  <span class="poster-wrap">
+    <img src="./42.jpg" alt="站住！花小姐" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>站住！花小姐</strong>
+    <em>2025 · 中国 · 剧集</em>
+    <span class="card-desc">曾是特种兵的女保镖假扮白富美接近纨绔富二代，却发现自己先动了心。</span>
+    <span class="tag-row"><span>霸总</span><span>反套路</span><span>女保镖</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0043.html" data-search="托马索 意大利 电影 2019 剧情 / 奇幻 家庭剧情 中年危机,幻觉,救赎,罗马">
+  <span class="poster-wrap">
+    <img src="./43.jpg" alt="托马索" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>托马索</strong>
+    <em>2019 · 意大利 · 电影</em>
+    <span class="card-desc">中年建筑师托马索在罗马陷入创作瓶颈，一只会说话的猫每晚闯入他的梦境，指引他找回失落的灵感。</span>
+    <span class="tag-row"><span>中年危机</span><span>幻觉</span><span>救赎</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0044.html" data-search="八千年魔眼 日本 动画剧集 2018 奇幻/悬疑 海外剧场 都市传说,魔眼,时间循环,能力代价,烧脑">
+  <span class="poster-wrap">
+    <img src="./44.jpg" alt="八千年魔眼" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>八千年魔眼</strong>
+    <em>2018 · 日本 · 动画剧集</em>
+    <span class="card-desc">高中生无意中获得能“回溯时间八秒钟”的魔眼，却发现自己每次使用都在创造新的平行世界。</span>
+    <span class="tag-row"><span>都市传说</span><span>魔眼</span><span>时间循环</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0045.html" data-search="周末惊魂 美国 电影 2025 恐怖, 惊悚 爱情喜剧 密室逃脱,生存游戏,高科技恐惧,真假难辨">
+  <span class="poster-wrap">
+    <img src="./45.jpg" alt="周末惊魂" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>周末惊魂</strong>
+    <em>2025 · 美国 · 电影</em>
+    <span class="card-desc">六个朋友参加周末高端密室逃脱，却发现自己被困在一个将真人暴力融入解谜的致命游戏里。</span>
+    <span class="tag-row"><span>密室逃脱</span><span>生存游戏</span><span>高科技恐惧</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0046.html" data-search="孝感动天粤语 中国香港 剧集 1997 家庭，剧情，年代 国产专区 粤语,亲情,年代剧,孝顺,港风">
+  <span class="poster-wrap">
+    <img src="./46.jpg" alt="孝感动天粤语" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>孝感动天粤语</strong>
+    <em>1997 · 中国香港 · 剧集</em>
+    <span class="card-desc">八十年代香港屋邨里，一个粗鲁的茶餐厅老板为了痴呆母亲，学会了织毛衣、唱粤曲和温柔。</span>
+    <span class="tag-row"><span>粤语</span><span>亲情</span><span>年代剧</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0047.html" data-search="星球大战：义军崛起第三季 美国 剧集 2025 科幻 / 动画 / 动作 动作科幻 太空歌剧,绝地遗孤,帝国阴影,家庭向">
+  <span class="poster-wrap">
+    <img src="./47.jpg" alt="星球大战：义军崛起第三季" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>星球大战：义军崛起第三季</strong>
+    <em>2025 · 美国 · 剧集</em>
+    <span class="card-desc">义军小队发现了一个沉睡在原力中的古代战舰，而激活它的代价是牺牲一名成员的记忆。</span>
+    <span class="tag-row"><span>太空歌剧</span><span>绝地遗孤</span><span>帝国阴影</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0048.html" data-search="泰版下一站是幸福泰语 泰国 剧集 2026 爱情喜剧 悬疑推理 姐弟恋,职场,泰式幽默,翻拍">
+  <span class="poster-wrap">
+    <img src="./48.jpg" alt="泰版下一站是幸福泰语" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>泰版下一站是幸福泰语</strong>
+    <em>2026 · 泰国 · 剧集</em>
+    <span class="card-desc">泰国版姐弟恋神话，32岁女高管被22岁实习撩到怀疑人生，泰式酸辣味十足。</span>
+    <span class="tag-row"><span>姐弟恋</span><span>职场</span><span>泰式幽默</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0049.html" data-search="向日葵女孩 日本 动画剧集 2015 治愈，青春 热门剧场 校园,成长,友谊,向阳">
+  <span class="poster-wrap">
+    <img src="./49.jpg" alt="向日葵女孩" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>向日葵女孩</strong>
+    <em>2015 · 日本 · 动画剧集</em>
+    <span class="card-desc">转学少女小葵永远笑着面对霸凌，因为她的秘密武器是种向日葵。</span>
+    <span class="tag-row"><span>校园</span><span>成长</span><span>友谊</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0050.html" data-search="士兵的女孩 美国 电影 2003 剧情 / 爱情 / 传记 亚洲剧场 军营禁忌,性别认同,真实事件改编,爱与偏见,小镇舆论">
+  <span class="poster-wrap">
+    <img src="./50.jpg" alt="士兵的女孩" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>士兵的女孩</strong>
+    <em>2003 · 美国 · 电影</em>
+    <span class="card-desc">一个在军营中以“新兵女孩”身份出现的表演者，意外与年轻士兵相爱，却在谎言被揭穿前先看见了制度与偏见的冷酷边界。</span>
+    <span class="tag-row"><span>军营禁忌</span><span>性别认同</span><span>真实事件改编</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0051.html" data-search="等待月亮 中国大陆 电影 2024 科幻、剧情 精选剧集 太空,孤独,AI,文艺科幻">
+  <span class="poster-wrap">
+    <img src="./51.jpg" alt="等待月亮" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>等待月亮</strong>
+    <em>2024 · 中国大陆 · 电影</em>
+    <span class="card-desc">在月球基地独自驻守三年的宇航员，每天收到来自地球的AI语音“晚安”，直到有一天语音说了一句从未说过的话。</span>
+    <span class="tag-row"><span>太空</span><span>孤独</span><span>AI</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0052.html" data-search="明堂 韩国 电影 2018 历史, 惊悚, 政治 悬疑推理 风水,王权斗争,古装,权谋">
+  <span class="poster-wrap">
+    <img src="./52.jpg" alt="明堂" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>明堂</strong>
+    <em>2018 · 韩国 · 电影</em>
+    <span class="card-desc">朝鲜顶级风水师卷入王子之争，发现一块宝地背后隐藏着颠覆王朝的阴谋。</span>
+    <span class="tag-row"><span>风水</span><span>王权斗争</span><span>古装</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0053.html" data-search="西环的故事 中国香港 电影 2025 剧情 / 犯罪 / 家庭 家庭剧情 香港,底层,父子情,宿命">
+  <span class="poster-wrap">
+    <img src="./53.jpg" alt="西环的故事" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>西环的故事</strong>
+    <em>2025 · 中国香港 · 电影</em>
+    <span class="card-desc">香港西环旧区，一名刚出狱的父亲发现，自己年仅12岁的儿子已成了街坊闻风丧胆的小混混头目。</span>
+    <span class="tag-row"><span>香港</span><span>底层</span><span>父子情</span></span>
+  </span>
+</a><a class="movie-card card-hover" href="./movies/movie-0054.html" data-search="真是兄弟 中国大陆 电影 2024 喜剧, 剧情 国产专区 东北,兄弟情,直播,拆迁,黑色幽默">
+  <span class="poster-wrap">
+    <img src="./54.jpg" alt="真是兄弟" loading="lazy">
+    <span class="poster-shade"></span>
+    <span class="play-badge">▶</span>
+  </span>
+  <span class="movie-card-body">
+    <strong>真是兄弟</strong>
+    <em>2024 · 中国大陆 · 电影</em>
+    <span class="card-desc">东北两兄弟为保住家里的烧烤店，开直播想成为网红，却意外卷入一场拆迁队的阴谋。</span>
+    <span class="tag-row"><span>东北</span><span>兄弟情</span><span>直播</span></span>
+  </span>
+</a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><span class="brand-mark">▶</span><strong>高清剧集大全</strong></div>
+      <p>精选站内电视剧栏目内容，覆盖不同地区与题材分类，页面持续更新便于集中浏览。</p>
+    </div>
+    <div>
+      <h2>栏目导航</h2>
+      <div class="footer-links">
+        <a href="./index.html">首页</a>
+        <a href="./categories.html">分类总览</a>
+        <a href="./rankings.html">排行榜</a>
+        <a href="./search.html">影片搜索</a>
+      </div>
+    </div>
+    <div>
+      <h2>剧集分类</h2>
+      <div class="footer-links">
+        <a href="./category-featured.html">精选剧集</a><a href="./category-hot-drama.html">热门剧场</a><a href="./category-mainland.html">国产专区</a><a href="./category-asia.html">亚洲剧场</a><a href="./category-global.html">海外剧场</a><a href="./category-suspense.html">悬疑推理</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 高清剧集大全 · 精选电视剧-高清剧集片库-电视剧免费在线观看</div>
+</footer>
+<script src="./assets/js/search-data.js"></script>
+<script src="./assets/js/main.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

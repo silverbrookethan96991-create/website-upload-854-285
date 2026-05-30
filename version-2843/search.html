@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>搜索筛选-热门片库持续更新-精选影片合集-高清影片在线观看</title>
+  <meta name="description" content="搜索热门片库全部影片内容。整理持续更新的热门片库内容，覆盖电影、影片和精选合集，便于按分类查看热门内容。">
+  <meta name="keywords" content="热门片库,持续更新,精选影片,影片合集,高清影片,热门影片,影视片库">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="./search.html">
+  <link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./index.html" aria-label="热门片库首页">
+        <span class="brand-mark">▶</span>
+        <span class="brand-text">热门片库</span>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a class="nav-link" href="./index.html">首页</a>
+        <a class="nav-link" href="./categories.html">分类</a>
+        <a class="nav-link" href="./all-movies.html">片库</a>
+        <a class="nav-link" href="./rankings.html">排行</a>
+        <a class="nav-link is-active" href="./search.html">搜索</a>
+      </nav>
+      <form class="header-search" action="./search.html" method="get">
+        <input type="search" name="q" placeholder="搜索影片、类型、地区" aria-label="搜索影片">
+        <button type="submit">搜索</button>
+      </form>
+      <button class="mobile-menu-button" type="button" data-mobile-toggle aria-label="打开导航">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" data-mobile-nav aria-label="移动导航">
+        <a class="mobile-nav-link" href="./index.html">首页</a>
+        <a class="mobile-nav-link" href="./categories.html">分类</a>
+        <a class="mobile-nav-link" href="./all-movies.html">片库</a>
+        <a class="mobile-nav-link" href="./rankings.html">排行</a>
+        <a class="mobile-nav-link is-active" href="./search.html">搜索</a>
+    </nav>
+  </header>
+  <main class="page-main">
+    <section class="page-hero small-hero search-hero">
+      <div>
+        <span class="section-kicker">Search</span>
+        <h1>搜索与筛选</h1>
+        <p>输入片名、年份、地区、类型、标签或分类名称，快速定位片库中的影片。</p>
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="search-panel" data-global-search>
+        <div class="filter-controls wide-controls">
+          <input type="search" data-global-query placeholder="输入关键词搜索全部片库" aria-label="搜索全部片库">
+          <select data-global-category aria-label="按分类筛选">
+            <option value="">全部分类</option>
+          <option value="经典佳片">经典佳片</option>
+          <option value="动作冒险">动作冒险</option>
+          <option value="喜剧轻松">喜剧轻松</option>
+          <option value="剧情片库">剧情片库</option>
+          <option value="爱情情感">爱情情感</option>
+          <option value="悬疑惊悚">悬疑惊悚</option>
+          <option value="科幻奇幻">科幻奇幻</option>
+          <option value="家庭治愈">家庭治愈</option>
+          <option value="动画剧集">动画剧集</option>
+          <option value="环球精选">环球精选</option>
+          </select>
+          <select data-global-type aria-label="按类型筛选">
+            <option value="">全部类型</option>
+            <option value="电影">电影</option>
+            <option value="电视剧">电视剧</option>
+            <option value="剧集">剧集</option>
+            <option value="动画">动画</option>
+            <option value="纪录">纪录</option>
+          </select>
+        </div>
+        <p class="filter-status" data-global-status></p>
+        <div class="movie-grid catalogue-grid" data-global-results></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="brand footer-brand" href="./index.html">
+          <span class="brand-mark">▶</span>
+          <span class="brand-text">热门片库</span>
+        </a>
+        <p>整理持续更新的热门片库内容，覆盖电影、影片和精选合集，便于按分类查看热门内容。</p>
+      </div>
+      <div>
+        <h3>快速入口</h3>
+        <ul>
+          <li><a href="./categories.html">分类总览</a></li>
+          <li><a href="./all-movies.html">全部片库</a></li>
+          <li><a href="./rankings.html">热门排行</a></li>
+          <li><a href="./search.html">搜索筛选</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>热门分类</h3>
+        <ul>
+          <li><a href="./category-classic.html">经典佳片</a></li>
+          <li><a href="./category-action.html">动作冒险</a></li>
+          <li><a href="./category-comedy.html">喜剧轻松</a></li>
+          <li><a href="./category-drama.html">剧情片库</a></li>
+          <li><a href="./category-romance.html">爱情情感</a></li>
+          <li><a href="./category-suspense.html">悬疑惊悚</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 热门片库 · 高清影片在线观看</div>
+  </footer>
+  <script defer src="./assets/search-data.js"></script>
+  <script defer src="./assets/site.js"></script>
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</body>
+</html>

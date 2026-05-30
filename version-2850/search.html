@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索筛选-高分电影-口碑影片排行榜单片库-精选影片片单持续更新浏览</title>
+    <meta name="description" content="高分电影搜索页，支持按标题、年份、地区、类型和标签筛选影片。">
+    <meta name="keywords" content="高分电影,口碑影片,电影排行榜,精选片单,电影片库,高分影片,内容更新,电影搜索,影片筛选">
+    <meta name="robots" content="index,follow">
+    <link rel="stylesheet" href="./assets/css/site.css">
+
+</head>
+<body>
+<header class="site-header glass-effect">
+    <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="高分电影 首页">
+            <span class="brand-mark">高</span>
+            <span class="brand-text gradient-text">高分电影</span>
+        </a>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-label="展开导航">菜单</button>
+        <nav class="site-nav" data-site-nav>
+            <a href="./index.html">首页</a>
+            <a href="./categories.html">分类</a>
+            <a href="./category-gaofen-jingxuan.html">高分精选</a><a href="./category-koubei-juqing.html">口碑剧情</a><a href="./category-xuanyi-fanzui.html">悬疑犯罪</a><a href="./category-aiqing-wenyi.html">爱情文艺</a>
+            <a href="./ranking.html">排行榜</a>
+            <a href="./latest.html">最新</a>
+        </nav>
+        <form class="header-search" action="./search.html" method="get">
+            <input type="search" name="q" placeholder="搜索影片..." aria-label="搜索影片">
+            <button type="submit">搜索</button>
+        </form>
+    </div>
+</header>
+<main class="page-transition">
+<section class="search-hero">
+    <div class="container">
+        <h1>搜索 / 筛选</h1>
+        <p>支持按标题、地区、类型、标签、年份和分类检索全站 2000 部影片。</p>
+    </div>
+</section>
+<section class="container section-block" data-search-page>
+    <div class="search-box">
+        <input type="search" data-search-input placeholder="输入影片名、标签、地区或类型..." aria-label="搜索影片">
+        <select data-search-year aria-label="按年份筛选">
+            <option value="">全部年份</option>
+            <option value="2029">2029</option><option value="2028">2028</option><option value="2027">2027</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option>
+        </select>
+        <select data-search-region aria-label="按地区筛选">
+            <option value="">全部地区</option>
+            <option value="中国大陆">中国大陆</option><option value="美国">美国</option><option value="日本">日本</option><option value="中国香港">中国香港</option><option value="韩国">韩国</option><option value="英国">英国</option><option value="中国台湾">中国台湾</option><option value="法国">法国</option><option value="中国">中国</option><option value="西班牙">西班牙</option><option value="香港">香港</option><option value="泰国">泰国</option><option value="德国">德国</option><option value="印度">印度</option><option value="意大利">意大利</option><option value="俄罗斯">俄罗斯</option><option value="巴西">巴西</option><option value="澳大利亚">澳大利亚</option><option value="美国/英国">美国/英国</option><option value="中国内地">中国内地</option><option value="加拿大">加拿大</option><option value="法国/德国">法国/德国</option><option value="台湾">台湾</option><option value="法国/比利时">法国/比利时</option><option value="美国/加拿大">美国/加拿大</option><option value="中国香港/中国大陆">中国香港/中国大陆</option><option value="瑞典">瑞典</option><option value="英国/美国">英国/美国</option><option value="日本/美国">日本/美国</option><option value="美国/中国大陆">美国/中国大陆</option>
+        </select>
+        <select data-search-type aria-label="按类型筛选">
+            <option value="">全部类型</option>
+            <option value="TV Series">TV Series</option><option value="TV 剧集">TV 剧集</option><option value="TV 动画">TV 动画</option><option value="TV剧集">TV剧集</option><option value="TV动画">TV动画</option><option value="剧情/家庭">剧情/家庭</option><option value="剧情/科幻">剧情/科幻</option><option value="剧集">剧集</option><option value="剧集 动作,喜剧">剧集 动作,喜剧</option><option value="剧集/动画">剧集/动画</option><option value="剧集/限定剧">剧集/限定剧</option><option value="剧集动画">剧集动画</option><option value="动漫">动漫</option><option value="动画">动画</option><option value="动画/OVA">动画/OVA</option><option value="动画/剧集">动画/剧集</option><option value="动画/动态漫">动画/动态漫</option><option value="动画剧集">动画剧集</option><option value="动画电影">动画电影</option><option value="动画短片">动画短片</option><option value="动画短片/电影">动画短片/电影</option><option value="日剧">日剧</option><option value="电影">电影</option><option value="电影 剧情/犯罪">电影 剧情/犯罪</option><option value="电影 悬疑,爱情,惊悚">电影 悬疑,爱情,惊悚</option><option value="电影(动画)">电影(动画)</option><option value="电影/动画">电影/动画</option><option value="电影/纪录片">电影/纪录片</option><option value="电影/纪录片风格">电影/纪录片风格</option><option value="电影/音乐纪实">电影/音乐纪实</option><option value="电视剧">电视剧</option><option value="电视剧 (16集)">电视剧 (16集)</option><option value="电视剧 (迷你剧)">电视剧 (迷你剧)</option><option value="电视剧/动画">电视剧/动画</option><option value="电视剧/第一季">电视剧/第一季</option><option value="电视剧/限定剧">电视剧/限定剧</option><option value="电视剧集">电视剧集</option><option value="真人秀/剧集">真人秀/剧集</option><option value="短片/电影">短片/电影</option><option value="纪录片">纪录片</option><option value="纪录片/警务纪实">纪录片/警务纪实</option><option value="综艺">综艺</option><option value="综艺/剧集">综艺/剧集</option><option value="综艺/教学">综艺/教学</option><option value="综艺/晚会">综艺/晚会</option><option value="综艺/演唱会">综艺/演唱会</option><option value="综艺/特别篇">综艺/特别篇</option><option value="综艺/纪录片">综艺/纪录片</option><option value="网剧">网剧</option><option value="网络剧">网络剧</option><option value="网络剧/短剧">网络剧/短剧</option><option value="网络微短剧">网络微短剧</option><option value="网络电影">网络电影</option><option value="美剧">美剧</option>
+        </select>
+    </div>
+    <p class="filter-count" data-search-count></p>
+    <div class="movie-grid search-results" data-search-results>
+        <article class="movie-card" data-movie-card data-title="日本昆虫记" data-year="2025" data-region="日本" data-genre="剧情/悬疑" data-tags="昆虫,社会隐喻,女性视角,今村昌平风" data-category="爱情文艺">
+    <a class="movie-poster" href="./movies/movie-0674.html" aria-label="查看《日本昆虫记》详情">
+        <img src="./74.jpg" alt="日本昆虫记" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2025</span>
+            <span>日本</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-0674.html">日本昆虫记</a></h3>
+        <p>女昆虫学家发现,东京地铁里出现了模仿蚂蚁社会结构的连环失踪案。</p>
+        <div class="tag-row"><span>昆虫</span><span>社会隐喻</span><span>女性视角</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="神枪手之死" data-year="2025" data-region="中国香港/中国大陆" data-genre="犯罪/动作/西部" data-tags="狙击手,复仇,荒漠,师徒" data-category="悬疑犯罪">
+    <a class="movie-poster" href="./movies/movie-0673.html" aria-label="查看《神枪手之死》详情">
+        <img src="./73.jpg" alt="神枪手之死" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2025</span>
+            <span>中国香港/中国大陆</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-0673.html">神枪手之死</a></h3>
+        <p>第一代亚洲“枪王”隐退荒漠二十年,却被自己亲手调教出的杀手徒弟用同一把狙击枪、在同一角度击碎了头颅。</p>
+        <div class="tag-row"><span>狙击手</span><span>复仇</span><span>荒漠</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="绿窗春情" data-year="2023" data-region="中国大陆" data-genre="剧情,爱情,历史" data-tags="民国,文人,窗景,书信,家族恩怨" data-category="历史传记">
+    <a class="movie-poster" href="./movies/movie-1682.html" aria-label="查看《绿窗春情》详情">
+        <img src="./32.jpg" alt="绿窗春情" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2023</span>
+            <span>中国大陆</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-1682.html">绿窗春情</a></h3>
+        <p>上世纪30年代,一扇绿色窗户见证了上海弄堂里一位大家闺秀与隔壁穷书生跨越阶级的禁忌之恋。</p>
+        <div class="tag-row"><span>民国</span><span>文人</span><span>窗景</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="了不起的疯狂" data-year="2025" data-region="中国大陆" data-genre="喜剧/冒险/家庭" data-tags="合家欢,公路喜剧,乌龙事件,治愈" data-category="悬疑犯罪">
+    <a class="movie-poster" href="./movies/movie-1793.html" aria-label="查看《了不起的疯狂》详情">
+        <img src="./143.jpg" alt="了不起的疯狂" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2025</span>
+            <span>中国大陆</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-1793.html">了不起的疯狂</a></h3>
+        <p>为了帮女儿完成“野外探险”的幼儿园作业,四个爸爸带着四个娃,开启了一场灾难级的疯狂露营。</p>
+        <div class="tag-row"><span>合家欢</span><span>公路喜剧</span><span>乌龙事件</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="最后的猿人" data-year="2025" data-region="中国大陆" data-genre="科幻,剧情" data-tags="末世,基因,伦理,孤独" data-category="奇幻科幻">
+    <a class="movie-poster" href="./movies/movie-0667.html" aria-label="查看《最后的猿人》详情">
+        <img src="./67.jpg" alt="最后的猿人" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2025</span>
+            <span>中国大陆</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-0667.html">最后的猿人</a></h3>
+        <p>人类灭绝后,仅存的一只猿人在实验室醒来,却发现“造物主”从未离开。</p>
+        <div class="tag-row"><span>末世</span><span>基因</span><span>伦理</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="幽灵公馆" data-year="2024" data-region="美国" data-genre="悬疑/惊悚/喜剧" data-tags="鬼屋,密室逃脱,反转,幽默,遗产" data-category="喜剧治愈">
+    <a class="movie-poster" href="./movies/movie-0663.html" aria-label="查看《幽灵公馆》详情">
+        <img src="./63.jpg" alt="幽灵公馆" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2024</span>
+            <span>美国</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-0663.html">幽灵公馆</a></h3>
+        <p>为了继承巨额遗产,一群陌生人被锁进一座会随机变换房间布局的诡异公馆。</p>
+        <div class="tag-row"><span>鬼屋</span><span>密室逃脱</span><span>反转</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="老而嚟癫" data-year="2001" data-region="中国香港" data-genre="剧情/喜剧" data-tags="香港精神,老年疯狂,草根逆袭" data-category="爱情文艺">
+    <a class="movie-poster" href="./movies/movie-1559.html" aria-label="查看《老而嚟癫》详情">
+        <img src="./59.jpg" alt="老而嚟癫" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2001</span>
+            <span>中国香港</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-1559.html">老而嚟癫</a></h3>
+        <p>香港庙街一群被子女嫌弃的七八十岁老人,组成“癫佬帮”去打劫黑社会老大的赌场。</p>
+        <div class="tag-row"><span>香港精神</span><span>老年疯狂</span><span>草根逆袭</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="曼德林街13号" data-year="2027" data-region="美国" data-genre="悬疑,惊悚,奇幻" data-tags="时间循环,公寓,邻居,秘密" data-category="历史传记">
+    <a class="movie-poster" href="./movies/movie-1333.html" aria-label="查看《曼德林街13号》详情">
+        <img src="./133.jpg" alt="曼德林街13号" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2027</span>
+            <span>美国</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-1333.html">曼德林街13号</a></h3>
+        <p>搬进老式公寓后,女主发现她每天都会进入不同年份的“曼德林街13号”,而一位邻居始终在场。</p>
+        <div class="tag-row"><span>时间循环</span><span>公寓</span><span>邻居</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="双雄会(下集)" data-year="1992" data-region="中国香港" data-genre="动作,犯罪,悬疑" data-tags="卧底,终极对决,兄弟反目,枪火" data-category="爱情文艺">
+    <a class="movie-poster" href="./movies/movie-1106.html" aria-label="查看《双雄会(下集)》详情">
+        <img src="./56.jpg" alt="双雄会(下集)" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>1992</span>
+            <span>中国香港</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-1106.html">双雄会(下集)</a></h3>
+        <p>卧底与黑帮大佬的最后一次见面,却意外揭开了两人身世相连的惊天秘密。</p>
+        <div class="tag-row"><span>卧底</span><span>终极对决</span><span>兄弟反目</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="东京爱情动作故事" data-year="2024" data-region="日本" data-genre="爱情/剧情" data-tags="成人产业,纪实风格,群像剧,行业揭秘,深夜剧" data-category="爱情文艺">
+    <a class="movie-poster" href="./movies/movie-1774.html" aria-label="查看《东京爱情动作故事》详情">
+        <img src="./124.jpg" alt="东京爱情动作故事" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2024</span>
+            <span>日本</span>
+            <span>剧集</span>
+        </div>
+        <h3><a href="./movies/movie-1774.html">东京爱情动作故事</a></h3>
+        <p>五个在东京成人影片产业边缘挣扎的普通人,用最不体面的工作,寻找最体面的爱情。</p>
+        <div class="tag-row"><span>成人产业</span><span>纪实风格</span><span>群像剧</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="柏林性爱死" data-year="2026" data-region="德国" data-genre="情色惊悚" data-tags="柏林,地下艺术,连环杀人,女权" data-category="喜剧治愈">
+    <a class="movie-poster" href="./movies/movie-0647.html" aria-label="查看《柏林性爱死》详情">
+        <img src="./47.jpg" alt="柏林性爱死" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2026</span>
+            <span>德国</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-0647.html">柏林性爱死</a></h3>
+        <p>柏林地下艺术圈接连发生命案,死者全是男权艺术家,死前均被强迫高潮。</p>
+        <div class="tag-row"><span>柏林</span><span>地下艺术</span><span>连环杀人</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="你本该做的事" data-year="2024" data-region="美国" data-genre="悬疑、奇幻、惊悚" data-tags="平行时空、后悔药、蝴蝶效应、道德困境" data-category="爱情文艺">
+    <a class="movie-poster" href="./movies/movie-1769.html" aria-label="查看《你本该做的事》详情">
+        <img src="./119.jpg" alt="你本该做的事" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2024</span>
+            <span>美国</span>
+            <span>剧集</span>
+        </div>
+        <h3><a href="./movies/movie-1769.html">你本该做的事</a></h3>
+        <p>一通神秘电话可以让主角修改过去24小时内做过的任意一个决定,但每次修改,都会导致一个亲人凭空消失。</p>
+        <div class="tag-row"><span>平行时空</span><span>后悔药</span><span>蝴蝶效应</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="红河" data-year="2009" data-region="中国大陆/越南" data-genre="爱情/剧情" data-tags="中越边境,哑女,风尘,纯爱,张家辉" data-category="青春校园">
+    <a class="movie-poster" href="./movies/movie-1655.html" aria-label="查看《红河》详情">
+        <img src="./5.jpg" alt="红河" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2009</span>
+            <span>中国大陆/越南</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-1655.html">红河</a></h3>
+        <p>越南哑女在云南摆摊被地痞欺负,一个懦弱的街边摊主为她捅了人,两人开始逃亡。</p>
+        <div class="tag-row"><span>中越边境</span><span>哑女</span><span>风尘</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="因为那场战争" data-year="2022" data-region="中国大陆" data-genre="剧情/历史" data-tags="战后创伤,家庭和解,时代变迁" data-category="悬疑犯罪">
+    <a class="movie-poster" href="./movies/movie-0978.html" aria-label="查看《因为那场战争》详情">
+        <img src="./78.jpg" alt="因为那场战争" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2022</span>
+            <span>中国大陆</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-0978.html">因为那场战争</a></h3>
+        <p>一场被遗忘的边境冲突,两个家庭三代人长达四十年的爱恨纠葛。</p>
+        <div class="tag-row"><span>战后创伤</span><span>家庭和解</span><span>时代变迁</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="托勒密·格雷最后的日子" data-year="2025" data-region="美国" data-genre="剧情/奇幻" data-tags="失忆老人,记忆碎片,黑帮往事,临终救赎,非线性叙事" data-category="悬疑犯罪">
+    <a class="movie-poster" href="./movies/movie-0528.html" aria-label="查看《托勒密·格雷最后的日子》详情">
+        <img src="./78.jpg" alt="托勒密·格雷最后的日子" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2025</span>
+            <span>美国</span>
+            <span>剧集</span>
+        </div>
+        <h3><a href="./movies/movie-0528.html">托勒密·格雷最后的日子</a></h3>
+        <p>患有严重失忆症的九旬黑帮元老,在生命的最后七天里,每天醒来都会从陌生人那里得知自己昨天又杀了一个人。</p>
+        <div class="tag-row"><span>失忆老人</span><span>记忆碎片</span><span>黑帮往事</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="勇者义彦与魔王城" data-year="2012" data-region="日本" data-genre="喜剧/奇幻" data-tags="恶搞RPG,低成本,佛祖吐槽,冒险,宅梗狂欢" data-category="爱情文艺">
+    <a class="movie-poster" href="./movies/movie-0527.html" aria-label="查看《勇者义彦与魔王城》详情">
+        <img src="./77.jpg" alt="勇者义彦与魔王城" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2012</span>
+            <span>日本</span>
+            <span>电视剧</span>
+        </div>
+        <h3><a href="./movies/movie-0527.html">勇者义彦与魔王城</a></h3>
+        <p>勇者义彦带着三个奇葩队友,用最穷的特效挑战魔王,但第一季连魔王城大门都没摸到。</p>
+        <div class="tag-row"><span>恶搞RPG</span><span>低成本</span><span>佛祖吐槽</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="推新人的故事" data-year="2025" data-region="中国大陆" data-genre="喜剧,剧情" data-tags="娱乐圈,经纪人,选秀,反转" data-category="亚洲剧集">
+    <a class="movie-poster" href="./movies/movie-0972.html" aria-label="查看《推新人的故事》详情">
+        <img src="./72.jpg" alt="推新人的故事" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2025</span>
+            <span>中国大陆</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-0972.html">推新人的故事</a></h3>
+        <p>过气经纪人为翻身,把一个路边摊烤串大叔包装成顶流偶像,却意外引爆全网打假狂潮。</p>
+        <div class="tag-row"><span>娱乐圈</span><span>经纪人</span><span>选秀</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="性感野兽2024" data-year="2024" data-region="英国/美国" data-genre="动作/犯罪" data-tags="硬汉,劫案,野兽,暴力美学" data-category="历史传记">
+    <a class="movie-poster" href="./movies/movie-1196.html" aria-label="查看《性感野兽2024》详情">
+        <img src="./146.jpg" alt="性感野兽2024" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2024</span>
+            <span>英国/美国</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-1196.html">性感野兽2024</a></h3>
+        <p>隐退十年的顶级悍匪被逼重出江湖,他必须在72小时内完成最后一单,否则女儿会被扔进鳄鱼池。</p>
+        <div class="tag-row"><span>硬汉</span><span>劫案</span><span>野兽</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="下岗风波" data-year="2025" data-region="中国大陆" data-genre="剧情、家庭、社会" data-tags="东北振兴,中年失业,直播带货,现实主义" data-category="亚洲剧集">
+    <a class="movie-poster" href="./movies/movie-0746.html" aria-label="查看《下岗风波》详情">
+        <img src="./146.jpg" alt="下岗风波" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2025</span>
+            <span>中国大陆</span>
+            <span>电视剧</span>
+        </div>
+        <h3><a href="./movies/movie-0746.html">下岗风波</a></h3>
+        <p>东北老国企下岗潮30年后,老劳模的儿子也面临裁员,父子俩一个要尊严,一个要生存,矛盾爆发。</p>
+        <div class="tag-row"><span>东北振兴</span><span>中年失业</span><span>直播带货</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="阿莱塔街388号" data-year="2022" data-region="西班牙" data-genre="恐怖,悬疑" data-tags="凶宅,邪教,遗产,录像带,密室逃脱" data-category="口碑剧情">
+    <a class="movie-poster" href="./movies/movie-0858.html" aria-label="查看《阿莱塔街388号》详情">
+        <img src="./108.jpg" alt="阿莱塔街388号" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2022</span>
+            <span>西班牙</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-0858.html">阿莱塔街388号</a></h3>
+        <p>为继承豪宅,六个陌生人必须在闹鬼的388号别墅里存活一夜,而规则只有一条:别睡。</p>
+        <div class="tag-row"><span>凶宅</span><span>邪教</span><span>遗产</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="人间·喜剧" data-year="2021" data-region="中国大陆" data-genre="剧情/喜剧" data-tags="小人物,黑色幽默,城市生活,温情,荒诞" data-category="爱情文艺">
+    <a class="movie-poster" href="./movies/movie-0856.html" aria-label="查看《人间·喜剧》详情">
+        <img src="./106.jpg" alt="人间·喜剧" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2021</span>
+            <span>中国大陆</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-0856.html">人间·喜剧</a></h3>
+        <p>一名落魄主播、一位失忆杀手与一个想自杀的老头,在冬至夜阴差阳错成了“一家人”。</p>
+        <div class="tag-row"><span>小人物</span><span>黑色幽默</span><span>城市生活</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="甜美错步" data-year="2024" data-region="中国大陆" data-genre="剧情,爱情,运动" data-tags="国标舞,替身,逆袭,女性成长" data-category="青春校园">
+    <a class="movie-poster" href="./movies/movie-0630.html" aria-label="查看《甜美错步》详情">
+        <img src="./30.jpg" alt="甜美错步" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2024</span>
+            <span>中国大陆</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-0630.html">甜美错步</a></h3>
+        <p>替身舞者为报复渣男搭档,却在对立舞者身上找到了真正的爱与自我。</p>
+        <div class="tag-row"><span>国标舞</span><span>替身</span><span>逆袭</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="杰西卡·琼斯第三季" data-year="2026" data-region="美国" data-genre="动作,剧情,犯罪" data-tags="超级英雄,私家侦探,PTSD" data-category="口碑剧情">
+    <a class="movie-poster" href="./movies/movie-1304.html" aria-label="查看《杰西卡·琼斯第三季》详情">
+        <img src="./104.jpg" alt="杰西卡·琼斯第三季" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2026</span>
+            <span>美国</span>
+            <span>剧集</span>
+        </div>
+        <h3><a href="./movies/movie-1304.html">杰西卡·琼斯第三季</a></h3>
+        <p>当拥有超级听力的新反派出现时,杰西卡·琼斯第一次因为能听到所有受害者的尖叫而崩溃。</p>
+        <div class="tag-row"><span>超级英雄</span><span>私家侦探</span><span>PTSD</span></div>
+    </div>
+</article>
+        <article class="movie-card" data-movie-card data-title="牢狱风云" data-year="2022" data-region="美国" data-genre="剧情/犯罪/悬疑" data-tags="监狱,黑帮,卧底,计中计" data-category="动作冒险">
+    <a class="movie-poster" href="./movies/movie-1750.html" aria-label="查看《牢狱风云》详情">
+        <img src="./100.jpg" alt="牢狱风云" loading="lazy" onerror="this.onerror=null; this.src='./assets/fallback-poster.svg';">
+        <span class="score-badge">9.9</span>
+        
+    </a>
+    <div class="movie-card-body">
+        <div class="movie-meta-line">
+            <span>2022</span>
+            <span>美国</span>
+            <span>电影</span>
+        </div>
+        <h3><a href="./movies/movie-1750.html">牢狱风云</a></h3>
+        <p>会计入狱为黑帮查账,却发现典狱长才是最大的洗钱头目。</p>
+        <div class="tag-row"><span>监狱</span><span>黑帮</span><span>卧底</span></div>
+    </div>
+</article>
+    </div>
+</section>
+</main>
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <section>
+            <div class="footer-brand">
+                <span class="brand-mark">高</span>
+                <strong>高分电影</strong>
+            </div>
+            <p>高分电影榜单栏目整理口碑影片与精选片单，覆盖多类型电影内容，便于按评分和热度浏览。</p>
+        </section>
+        <section>
+            <h2>内容入口</h2>
+            <ul>
+                <li><a href="./categories.html">分类总览</a></li>
+                <li><a href="./ranking.html">口碑排行榜</a></li>
+                <li><a href="./latest.html">最新更新</a></li>
+                <li><a href="./search.html">搜索筛选</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>分类片单</h2>
+            <ul>
+                <li><a href="./category-gaofen-jingxuan.html">高分精选</a></li><li><a href="./category-koubei-juqing.html">口碑剧情</a></li><li><a href="./category-xuanyi-fanzui.html">悬疑犯罪</a></li><li><a href="./category-aiqing-wenyi.html">爱情文艺</a></li><li><a href="./category-dongzuo-maoxian.html">动作冒险</a></li><li><a href="./category-qihuan-kehuan.html">奇幻科幻</a></li><li><a href="./category-qingchun-xiaoyuan.html">青春校园</a></li><li><a href="./category-lishi-zhuanji.html">历史传记</a></li><li><a href="./category-xiju-zhiyu.html">喜剧治愈</a></li><li><a href="./category-yazhou-juji.html">亚洲剧集</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>收录说明</h2>
+            <p>本站共收录 2000 部影片与剧集，每部作品均提供剧情简介、片单短评、相关推荐与播放入口。</p>
+        </section>
+    </div>
+    <div class="footer-bottom">© 2026 高分电影. 精选影片片单持续更新浏览。</div>
+</footer>
+<script src="./assets/js/site.js"></script>
+<script src="./assets/js/search-index.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?76b5e2e0f6c84c06f0a7cb7105df054d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

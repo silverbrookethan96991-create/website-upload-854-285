@@ -1,0 +1,12 @@
+{
+    "parsed_movies": 2000,
+    "detail_pages": 2000,
+    "html_pages_total": 2015,
+    "category_pages": 10,
+    "category_card_count": 2000,
+    "video_sources_from_uploaded_js": 150,
+    "baidu_missing_pages": [],
+    "orphan_detail_ids_from_main_indexes": [],
+    "cover_rule": "X = ((N - 1) % 150) + 1",
+    "generated_at": "2026-05-26T16:33:04Z"
+}
